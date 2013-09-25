@@ -1,0 +1,48 @@
+﻿<Window x:Class="IsbmPublisher.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="ISBM Publisher" MinHeight="212" MaxHeight="212" Width="640" WindowStartupLocation="CenterScreen" Closing="Window_Closing">
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Margin" Value="6"/>
+        </Style>
+        <Style TargetType="Label">
+            <Setter Property="Margin" Value="3"/>
+        </Style>
+        <Style TargetType="TextBox">
+            <Setter Property="Margin" Value="3"/>
+        </Style>
+    </Window.Resources>
+    <DockPanel>
+        <StatusBar DockPanel.Dock="Bottom" Height="23">
+            <TextBlock Name="txtStatus" />
+        </StatusBar>
+        <StackPanel>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Row="0" Grid.Column="0">Channel</Label>
+                <Label Grid.Row="1" Grid.Column="0">Topic</Label>
+                <Label Grid.Row="2" Grid.Column="0">XML File</Label>
+                <TextBox Grid.Row="0" Grid.Column="1" Name="txtChannel"/>
+                <TextBox Grid.Row="1" Grid.Column="1" Name="txtTopic"/>
+                <DockPanel Grid.Row="2" Grid.Column="1">
+                    <Button DockPanel.Dock="Right" Width="20" Name="btnFile" Click="btnFile_Click">...</Button>
+                    <TextBox Name="txtFile"/>
+                </DockPanel>
+            </Grid>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button Width="120" Height="40" Click="btnConnect_Click" Name="btnConnect">Connect</Button>
+                <Button Width="120" Height="40" Click="btnPost_Click" Name="btnPost" Visibility="Collapsed">Post Publication</Button>
+                <Button Width="120" Height="40" Click="btnDisconnect_Click" Name="btnDisconnect" Visibility="Collapsed">Disconnect</Button>
+            </StackPanel>
+        </StackPanel>
+    </DockPanel>
+</Window>

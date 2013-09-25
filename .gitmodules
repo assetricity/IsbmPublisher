@@ -1,0 +1,3 @@
+[submodule "IsbmClient"]
+	path = IsbmClient
+	url = git@github.com:assetricity/IsbmClient.git
