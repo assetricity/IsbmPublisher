@@ -6,6 +6,6 @@ ws-ISBM server endpoints and default configuration options are set in the `app.c
 
 ## License
 
-Copyright 2013 [Assetricity, LLC](http://assetricity.com)
+Copyright 2014 [Assetricity, LLC](http://assetricity.com)
 
 ISBM Publisher is released under the MIT License. See [LICENSE](https://github.com/assetricity/IsbmPublisher/blob/master/LICENSE) for details.
