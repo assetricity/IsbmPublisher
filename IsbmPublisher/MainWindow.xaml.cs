@@ -13,8 +13,8 @@ namespace IsbmPublisher
     public partial class MainWindow : Window
     {
         private string _sessionId;
-        private ISBMChannelManagementServiceClient _channelClient;
-        private ISBMProviderPublicationServiceClient _providerClient;
+        private ChannelManagementServiceClient _channelClient;
+        private ProviderPublicationServiceClient _providerClient;
 
         public MainWindow()
         {
@@ -24,8 +24,8 @@ namespace IsbmPublisher
             txtTopic.Text = Properties.Settings.Default.DefaultTopic;
             txtFile.Text = Properties.Settings.Default.DefaultFile;
 
-            _channelClient = new ISBMChannelManagementServiceClient();
-            _providerClient = new ISBMProviderPublicationServiceClient();
+            _channelClient = new ChannelManagementServiceClient();
+            _providerClient = new ProviderPublicationServiceClient();
         }
 
         private void btnFile_Click(object sender, RoutedEventArgs e)
