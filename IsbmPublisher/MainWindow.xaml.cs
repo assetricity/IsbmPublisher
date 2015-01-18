@@ -13,7 +13,6 @@ namespace IsbmPublisher
     public partial class MainWindow : Window
     {
         private string _sessionId;
-        private ChannelManagementServiceClient _channelClient;
         private ProviderPublicationServiceClient _providerClient;
 
         public MainWindow()
@@ -24,7 +23,6 @@ namespace IsbmPublisher
             txtTopic.Text = Properties.Settings.Default.DefaultTopic;
             txtFile.Text = Properties.Settings.Default.DefaultFile;
 
-            _channelClient = new ChannelManagementServiceClient();
             _providerClient = new ProviderPublicationServiceClient();
         }
 
@@ -47,7 +45,6 @@ namespace IsbmPublisher
             Cursor = Cursors.Wait;
             try
             {
-                Channel channel = _channelClient.GetChannel(txtChannel.Text);
                 _sessionId = _providerClient.OpenPublicationSession(txtChannel.Text);
 
                 txtStatus.Text = "Connected to ISBM with session id " + _sessionId;
