@@ -8,6 +8,6 @@ The default `app.config` expects a HTTPS endpoint. Ensure that appropriate certi
 
 ## License
 
-Copyright 2014 [Assetricity, LLC](http://assetricity.com)
+Copyright [Assetricity, LLC](http://assetricity.com)
 
 ISBM Publisher is released under the MIT License. See [LICENSE](https://github.com/assetricity/IsbmPublisher/blob/master/LICENSE) for details.
