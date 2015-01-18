@@ -57,7 +57,7 @@ namespace IsbmPublisher
             catch (Exception ex)
             {
                 Cursor = Cursors.Arrow;
-                MessageBox.Show(ex.ToString(), "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show(ex.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
             finally
             {
@@ -84,7 +84,7 @@ namespace IsbmPublisher
             catch (Exception ex)
             {
                 Cursor = Cursors.Arrow;
-                MessageBox.Show(ex.ToString(), "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show(ex.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
             finally
             {
@@ -104,7 +104,7 @@ namespace IsbmPublisher
             catch (Exception ex)
             {
                 Cursor = Cursors.Arrow;
-                MessageBox.Show(ex.ToString(), "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show(ex.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
             finally
             {
